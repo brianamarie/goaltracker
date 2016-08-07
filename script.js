@@ -12,7 +12,6 @@ $(".item").click(function() {
   var dt = new Date();
   var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
   $(".log").append($(this).html() + ", " + dt + time + "<br>");
-  alert("Woohoo! 1 point gained! The following will be added to your log: " + $(this).html() + ", " + dt + time);
 });
 
 //click to add more
