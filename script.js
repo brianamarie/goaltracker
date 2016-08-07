@@ -7,6 +7,9 @@ $(".counter").html("Points: " + counter + "/" + goal);
 //when clicking item, point is added to counter, notification given, and added to log
 
 $(".item").click(function() {
+ if ($(this).hasClass("two")){
+    counter += 1;
+  };
   counter += 1;
   $(".counter").html("Points: " + counter + "/" + goal);
   var dt = new Date();
@@ -32,7 +35,6 @@ $(".logbtn").click(function() {
 
 });
 
-//clear the log with warning
 $(".clearlog").click(function(){
   var d = confirm("Are you sure you want to delete your progress?");
   if (d === true) {
