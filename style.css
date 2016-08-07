@@ -1,6 +1,9 @@
-.container {
+.main {
   border-radius: 5px;
   border: 10px solid black
+}
+.container {
+  text-align: center;
 }
 .count {
   background: rgb(120, 10, 150);
@@ -29,9 +32,7 @@
   margin: 10px;
   text-align: center;
 }
-.button {
-  
-}
+
 //Dev only
 .done {
   color: green;
