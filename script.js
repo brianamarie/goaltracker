@@ -1,12 +1,12 @@
 var counter = 0
-var goal = prompt("How many points do want to work towards?")
-//initial counter display
+  //var goal = prompt("How many points do want to work towards?")
+var goal = 50
+  //initial counter display
 $(".counter").html("Points: " + counter + "/" + goal);
-
 
 //when clicking item, point is added to counter, notification given, and added to log
 
-$("button").click(function() {
+$(".item").click(function() {
   counter += 1;
   $(".counter").html("Points: " + counter + "/" + goal);
   var dt = new Date();
@@ -15,13 +15,20 @@ $("button").click(function() {
   alert("Woohoo! 1 point gained! The following will be added to your log: " + $(this).html() + ", " + dt + time);
 });
 
-
 //click to add more
-$(".addmore").click(function(){
+$(".addmore").click(function() {
   var newgoal = prompt("What goal would you like to add?");
-  $(".checklist").append("<button class='btn'>" + newgoal + "</button>");
+  $(".checklist").append("<button class='btn item'>" + newgoal + "</button>");
 });
 
-$("button").click(function(){
-  console.log("click1");
+$(".logbtn").click(function() {
+  //change button text
+  //change class 
+  $(".log").toggle();
+  if ($(".logbtn").html("Hide Log")) {
+    $(".logbtn").html("View Log");
+  } else {
+    $(".logbtn").html("Hide Log");
+  };
+
 });
