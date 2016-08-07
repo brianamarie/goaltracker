@@ -7,7 +7,8 @@ $(".counter").html("Points: " + counter + "/" + goal);
 //when clicking item, point is added to counter, notification given, and added to log
 
 $(".item").click(function() {
- if ($(this).hasClass("two")){
+  if ($(this).hasClass("two")){
+    console.log("working");
     counter += 1;
   };
   counter += 1;
