@@ -15,7 +15,7 @@ $(".item").click(function() {
   $(".counter").html("Points: " + counter + "/" + goal);
   var dt = new Date();
   var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-  $(".log").append($(this).html() + ", " + dt + time + "<br>");
+  $(".log").append("<b>" + $(this).html() + "</b>, " + dt + time + "<br>");
 });
 
 //click to add more
@@ -28,11 +28,6 @@ $(".logbtn").click(function() {
   //change button text
   //change class 
   $(".log").toggle();
-  if ($(".logbtn").html("Hide Log")) {
-    $(".logbtn").html("View Log");
-  } else {
-    $(".logbtn").html("Hide Log");
-  };
 
 });
 
