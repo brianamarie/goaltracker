@@ -32,3 +32,13 @@ $(".logbtn").click(function() {
   };
 
 });
+
+//clear the log with warning
+$(".clearlog").click(function(){
+  var d = confirm("Are you sure you want to delete your progress?");
+  if (d === true) {
+    counter = 0;
+    $(".log").empty();
+    $(".counter").html("Points: " + counter + "/" + goal);
+  };
+})
